@@ -5,7 +5,7 @@ Para ejecutar el script con Docker instalado, siga estos pasos:
 1.  **📥 Clonar el repositorio**
 
     ```bash
-    git clone https://github.com/tu-usuario/mongodoro.git
+    git clone https://github.com/pablodelacruz/mongodoro
     cd mongodoro
     ```
 
@@ -19,7 +19,7 @@ Para ejecutar el script con Docker instalado, siga estos pasos:
     MONGO_PASSWORD=       # 🔑 Completar con contraseña
     MONGO_URI=mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_HOST}:${MONGO_PORT}
     MONGO_DB=mongodorodb
-    MONGO_COLLECTION=tss
+    MONGO_COLLECTION=     # Nombre de la collection
     RECORDS_TO_INSERT=    # 🔢 Completar con cantidad de registros (ej: 12000000)
     MONGO_EXPRESS_PORT=8081
     ```
@@ -57,5 +57,5 @@ http://localhost:8081/
 Podrá realizar las siguientes acciones:
 
 - 🔍 **Ver información de la base de datos**
-- 📂 **Inspeccionar la colección `tss`**
+- 📂 **Inspeccionar la colección**
 - 🔎 **Realizar consultas a los datos**
