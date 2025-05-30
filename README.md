@@ -13,15 +13,22 @@ Para ejecutar el script con Docker instalado, siga estos pasos:
     Cree un archivo `.env` en el directorio raíz con este contenido:
 
     ```env
+    DB_USER= #Usuario
+    DB_PASSWORD= #password
+    
     MONGO_HOST=mongo
     MONGO_PORT=27017
-    MONGO_USER=           # 🔐 Completar con usuario
-    MONGO_PASSWORD=       # 🔑 Completar con contraseña
+    MONGO_USER=${DB_USER}
+    MONGO_PASSWORD=${DB_PASSWORD}
     MONGO_URI=mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_HOST}:${MONGO_PORT}
     MONGO_DB=mongodorodb
-    MONGO_COLLECTION=     # Nombre de la collection
-    RECORDS_TO_INSERT=    # 🔢 Completar con cantidad de registros (ej: 12000000)
+    MONGO_COLLECTION= #Nombre de la coleccion, default: Empleados
     MONGO_EXPRESS_PORT=8081
+    
+    RECORDS_TO_INSERT= #Cantidad de registros a insertar.
+    SEARCH_N= #Cantidad de registros a buscar
+    SEARCH_CHUNK= # Cantidad de registros a buscar juntos
+    DISPLAY_NO_DOCUMENTO=false #Para que no imprima todos los no_documentos buscados
     ```
 
 3.  **🐳 Ejecutar el contenedor**
